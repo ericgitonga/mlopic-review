@@ -4,8 +4,8 @@ import streamlit_analytics
 st.title("Expectations vs. Reality")
 
 with streamlit_analytics.track():
-    food_on_menu = st.sidebar.file_uploader("Upload a photo of the food as shown on the menu.")
-    food_received = st.sidebar.file_uploader("Upload a photo of the food received.")
+    food_on_menu = st.file_uploader("Upload a photo of the food as shown on the menu.")
+    food_received = st.file_uploader("Upload a photo of the food received.")
     if food_on_menu is not None and food_received is not None:
         c1, c2 = st.columns(2)
         with c1:
